@@ -6,7 +6,10 @@ const App = () => {
     <div className='ui container comments'>
       <div className='comment'>
         <a href='/' className='avatar'>
-          <img alt='avatar' />
+          <img
+            alt='avatar'
+            src='https://images.unsplash.com/photo-1611119999058-882233e88d35?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=100&ixid=MXwxfDB8MXxyYW5kb218fHx8fHx8fA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=100'
+          />
         </a>
         <div className='content'>
           <a href='/' className='author'>
