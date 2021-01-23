@@ -8,6 +8,12 @@ const App = () => {
   return (
     <div className='ui container comments'>
       <ApprovalCard>
+        <div>
+          <h4>Warning!</h4>
+          <p>Are you sure you want to continue?</p>
+        </div>
+      </ApprovalCard>
+      <ApprovalCard>
         <CommentDetail
           author={faker.name.findName()}
           timeAgo='Today at 4:45PM'
@@ -15,24 +21,22 @@ const App = () => {
           avatar='http://placeimg.com/64/64/arch'
         />
       </ApprovalCard>
-      <CommentDetail
-        author={faker.name.findName()}
-        timeAgo='Today at 4:45PM'
-        content={faker.lorem.sentence()}
-        avatar='http://placeimg.com/64/64/nature'
-      />
-      <CommentDetail
-        author={faker.name.findName()}
-        timeAgo='Today at 2:00AM'
-        content={faker.lorem.sentence()}
-        avatar='http://placeimg.com/64/64/people'
-      />
-      <CommentDetail
-        author={faker.name.findName()}
-        timeAgo='Yesterday at 5:00PM'
-        content={faker.lorem.sentence()}
-        avatar='http://placeimg.com/64/64/tech'
-      />
+      <ApprovalCard>
+        <CommentDetail
+          author={faker.name.findName()}
+          timeAgo='Today at 4:45PM'
+          content={faker.lorem.sentence()}
+          avatar='http://placeimg.com/64/64/nature'
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          author={faker.name.findName()}
+          timeAgo='Today at 2:00AM'
+          content={faker.lorem.sentence()}
+          avatar='http://placeimg.com/64/64/people'
+        />
+      </ApprovalCard>
     </div>
   );
 };
