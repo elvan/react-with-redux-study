@@ -1,11 +1,11 @@
+// @ts-nocheck
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Search = () => {
   const [term, setTerm] = useState('programming');
-  const [result, setResult] = useState([]);
-
-  console.log(result);
+  const [results, setResults] = useState([]);
 
   useEffect(() => {
     const search = async () => {
@@ -19,13 +19,24 @@ const Search = () => {
         },
       });
 
-      setResult(data.query.search);
+      setResults(data.query.search);
     };
 
     if (term) {
       search();
     }
   }, [term]);
+
+  const renderedResults = results.map((result) => {
+    return (
+      <div className="item" key={result.pageid}>
+        <div className="content">
+          <div className="header">{result.title}</div>
+          <p>{result.snippet}</p>
+        </div>
+      </div>
+    );
+  });
 
   return (
     <div>
@@ -39,6 +50,7 @@ const Search = () => {
           />
         </div>
       </div>
+      <div className="ui celled list">{renderedResults}</div>
     </div>
   );
 };
