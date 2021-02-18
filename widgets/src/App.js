@@ -1,7 +1,9 @@
 import React from 'react';
 // import Accordion from './components/Accordion';
-import Search from './components/Search';
+// import Search from './components/Search';
+import Dropdown from './components/Dropdown';
 
+// Accordion items
 const items = [
   {
     title: 'What is Angular',
@@ -23,11 +25,28 @@ const items = [
   },
 ];
 
+// Dropdown options
+const options = [
+  {
+    label: 'The Color Red',
+    value: 'red',
+  },
+  {
+    label: 'The Color Green',
+    value: 'green',
+  },
+  {
+    label: 'The Color Blue',
+    value: 'blue',
+  },
+];
+
 const App = () => {
   return (
     <div>
       {/* <Accordion items={items} /> */}
-      <Search />
+      {/* <Search /> */}
+      <Dropdown options={options} />
     </div>
   );
 };
