@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Translate from './components/Translate';
+import Accordion from './components/Accordion';
+import Search from './components/Search';
 
 // Accordion items
 const items = [
@@ -39,10 +41,30 @@ const options = [
   },
 ];
 
+const showAccordion = () => {
+  if (window.location.pathname === '/') {
+    return <Accordion items={items} />;
+  }
+};
+
+const showList = () => {
+  if (window.location.pathname === '/list') {
+    return <Search />;
+  }
+};
+
+const showTranslate = () => {
+  if (window.location.pathname === '/translate') {
+    return <Translate />;
+  }
+};
+
 const App = () => {
   return (
     <div>
-      <Translate />
+      {showAccordion()}
+      {showList()}
+      {showTranslate()}
     </div>
   );
 };
