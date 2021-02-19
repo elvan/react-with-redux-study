@@ -4,20 +4,20 @@ import Dropdown from './Dropdown';
 
 const options = [
   {
-    label: 'Afrikaans',
-    value: 'af',
-  },
-  {
     label: 'Arabic',
     value: 'ar',
   },
   {
-    label: 'Hindi',
-    value: 'hi',
-  },
-  {
     label: 'Dutch',
     value: 'nl',
+  },
+  {
+    label: 'Italian',
+    value: 'it',
+  },
+  {
+    label: 'Spanish',
+    value: 'es',
   },
 ];
 
